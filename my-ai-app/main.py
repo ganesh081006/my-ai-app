@@ -31,3 +31,7 @@ def get_cards():
 def add_card(card: Flashcard):
     study_data.append(card.dict())
     return {"message": "Success"}
+
+@app.get("/")
+def home():
+    return {"message": "Ganesh's AI API is live!"}
